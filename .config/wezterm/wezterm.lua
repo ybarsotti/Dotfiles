@@ -7,6 +7,17 @@ local move = require("plugins.move_workspace")
 
 local config = wezterm.config_builder()
 
+if wezterm.target_triple == "x86_64-pc-windows-msvc" then
+config.launch_menu = {
+	{
+		label = "PowerShell",
+		args = { "powershell.exe", "-NoLogo" },
+	},
+}
+config.default_prog = { "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe" }
+end
+
+
 config.colors = theme
 config.default_workspace = "~"
 
