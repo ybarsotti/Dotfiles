@@ -3,20 +3,9 @@ local fonts = require("fonts")
 local keys = require("keys")
 local bar = require("plugins.bar")
 local theme = require("themes.cyberdream")
-local move = require("plugins.move_workspace")
+require("plugins.zen-mode-vim")
 
 local config = wezterm.config_builder()
-
-if wezterm.target_triple == "x86_64-pc-windows-msvc" then
-config.launch_menu = {
-	{
-		label = "PowerShell",
-		args = { "powershell.exe", "-NoLogo" },
-	},
-}
-config.default_prog = { "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe" }
-end
-
 
 config.colors = theme
 config.default_workspace = "~"
@@ -37,7 +26,7 @@ config.tab_bar_at_bottom = false
 config.use_fancy_tab_bar = false
 config.tab_and_split_indices_are_zero_based = true
 
-config.window_background_opacity = 0.90
+config.window_background_opacity = 0.95
 config.macos_window_background_blur = 50
 config.animation_fps = 60
 config.prefer_egl = true
@@ -54,10 +43,10 @@ config.default_cursor_style = "BlinkingBlock"
 config.cursor_blink_rate = 800
 
 config.enable_kitty_graphics = true
+config.hide_tab_bar_if_only_one_tab = true
 
 fonts.setup(config)
 keys.setup(config)
 bar.setup(config)
-move.setup(config)
 
 return config
