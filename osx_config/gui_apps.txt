@@ -1,0 +1,7 @@
+jetbrains-toolbox
+keybase
+gather
+raycast
+stats
+alt-tab
+

@@ -32,13 +32,13 @@ alias python=/usr/bin/python3
 # CLI Prog
 alias lg='lazygit'
 alias ld="lazydocker"
+alias l='eza -l -a --icons --group-directories-first'
 
 # Editor
 alias vi="nvim"
 alias vim="nvim"
 
 eval $(thefuck --alias fuck)
-eval "$(starship init zsh)"
 
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd

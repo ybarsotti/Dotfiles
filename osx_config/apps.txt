@@ -1,0 +1,10 @@
+discord
+slack
+spotify
+figma
+notion
+wezterm
+keycastr
+kap
+arc
+

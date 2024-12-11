@@ -1,0 +1,10 @@
+thefuck
+yazi
+lazygit
+lazydocker
+neovim
+go
+jandedobbeleer/oh-my-posh/oh-my-posh
+font-hack-nerd-font
+eza
+
