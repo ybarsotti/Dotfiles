@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BAT_mini_label</key>
+	<false/>
+	<key>Battery_barChart_position</key>
+	<integer>3</integer>
+	<key>Battery_batteryDetails_position</key>
+	<integer>4</integer>
+	<key>Battery_battery_color</key>
+	<false/>
+	<key>Battery_battery_position</key>
+	<integer>1</integer>
+	<key>Battery_battery_xlSize</key>
+	<false/>
+	<key>Battery_color</key>
+	<false/>
+	<key>Battery_label_position</key>
+	<integer>2</integer>
+	<key>Battery_mini_position</key>
+	<integer>0</integer>
+	<key>Battery_notifications_low</key>
+	<string>0.2</string>
+	<key>Battery_oneView</key>
+	<true/>
+	<key>Battery_widget</key>
+	<string>battery,mini</string>
+	<key>CPU_barChart_position</key>
+	<integer>3</integer>
+	<key>CPU_label_position</key>
+	<integer>2</integer>
+	<key>CPU_lineChart_position</key>
+	<integer>1</integer>
+	<key>CPU_mini_label</key>
+	<true/>
+	<key>CPU_mini_position</key>
+	<integer>0</integer>
+	<key>CPU_notifications_totalLoad_state</key>
+	<false/>
+	<key>CPU_pieChart_position</key>
+	<integer>4</integer>
+	<key>CPU_tachometer_position</key>
+	<integer>5</integer>
+	<key>CPU_widget</key>
+	<string>mini</string>
+	<key>CombinedModules</key>
+	<false/>
+	<key>Disk_removable</key>
+	<false/>
+	<key>Disk_updateInterval</key>
+	<integer>60</integer>
+	<key>NSNavPanelExpandedSizeForSaveMode</key>
+	<string>{800, 448}</string>
+	<key>NSNavPanelExpandedStateForSaveMode</key>
+	<true/>
+	<key>NSStatusItem Preferred Position Battery</key>
+	<real>522</real>
+	<key>NSStatusItem Preferred Position CPU</key>
+	<real>745</real>
+	<key>NSStatusItem Preferred Position Disk</key>
+	<real>643</real>
+	<key>NSStatusItem Preferred Position Network</key>
+	<real>568</real>
+	<key>NSStatusItem Preferred Position RAM</key>
+	<real>694</real>
+	<key>NSWindow Frame NSNavPanelAutosaveName</key>
+	<string>-220 1287 800 448 -599 900 2560 1055 </string>
+	<key>Network_publicIPRefreshInterval</key>
+	<string>never</string>
+	<key>Network_speed_displayValue</key>
+	<string>io</string>
+	<key>Network_speed_icon</key>
+	<string>arrows</string>
+	<key>Network_speed_iconAlignment</key>
+	<string>left</string>
+	<key>Network_speed_iconColor</key>
+	<string>default</string>
+	<key>Network_speed_mode</key>
+	<string>twoRows</string>
+	<key>Network_speed_monochrome</key>
+	<false/>
+	<key>Network_speed_units</key>
+	<true/>
+	<key>Network_speed_valueColor</key>
+	<string>constant</string>
+	<key>Network_usageReset</key>
+	<string>Never</string>
+	<key>RAM_appColor</key>
+	<string>secondBlue</string>
+	<key>RAM_notifications_free_state</key>
+	<false/>
+	<key>dockIcon</key>
+	<false/>
+	<key>runAtLoginInitialized</key>
+	<true/>
+	<key>setupProcess</key>
+	<true/>
+	<key>telemetry</key>
+	<false/>
+	<key>temperature_units</key>
+	<string>celsius</string>
+	<key>updater_check_ts</key>
+	<integer>1733944115</integer>
+	<key>version</key>
+	<string>2.11.20</string>
+</dict>
+</plist>
