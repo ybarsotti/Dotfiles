@@ -3,19 +3,25 @@ export TERM="xterm-256color"
 export EDITOR='vi'
 
 # Aliases
-# Program
+## Program language
 alias python=/usr/bin/python3 
 
-# CLI Prog
+## Terminal Prog
 alias lg='lazygit'
 alias ld="lazydocker"
-alias l='eza -l -a --icons --group-directories-first'
+alias l='eza -l -a --icons --group-directories-first --color=always --icons=always --no-user'
 
-# Editor
+## Editor
 alias vi="nvim"
 alias vim="nvim"
 
-eval $(thefuck --alias fuck)
+# tree
+alias tree="tree -L 3 -a -I '.git' --charset X "
+alias dtree="tree -L 3 -a -d -I '.git' --charset X "
+
+## Other
+alias c="clear"
+alias e="exit"
 
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
@@ -36,6 +42,28 @@ export XDG_CONFIG_HOME="$HOME/.config"
 # Tmux
 export TMUX_PLUGIN_MANAGER_PATH="$XDG_CONFIG_HOME/tmux/plugins"
 
+# Startup terminal apps
+## FZF
+## Set up fzf key bindings and fuzzy completion
+eval "$(fzf --zsh)"
+
+export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git "
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
+
+export FZF_DEFAULT_OPTS="--height 50% --layout=default --border --color=hl:#2dd4bf"
+
+# Setup fzf previews
+export FZF_CTRL_T_OPTS="--preview 'bat --color=always -n --line-range :500 {}'"
+export FZF_ALT_C_OPTS="--preview 'eza --icons=always --tree --color=always {} | head -200'"
+
+# fzf preview for tmux
+export FZF_TMUX_OPTS=" -p90%,70% "  
+
+## The fuck
+eval $(thefuck --alias fuck)
+
+
 export NVM_DIR="$HOME/.nvm"
 export GPG_TTY=$(tty)
 
@@ -45,6 +73,7 @@ export GPG_TTY=$(tty)
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# NOTE: Must be the last line
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
 	eval "$(oh-my-posh init zsh --config $HOME/.config/.oh-my-posh/slimfat.omp.toml)"
 fi

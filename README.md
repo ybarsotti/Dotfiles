@@ -7,8 +7,7 @@ App lists are in the  [osx_config](./osx_config/) folder.
 
 ```sh
 # Install apps
-cat osx_config/apps.txt osx_config/cli_apps.txt | xargs brew install
-xargs brew install --cask < gui_apps.txt
+./script/bootstrap_mac.sh
 ```
 
 ### Install manually
