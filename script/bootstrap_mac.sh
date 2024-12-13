@@ -1,17 +1,35 @@
 #!/bin/bash
 
+set -e
+
+echo ''
+
+info () {
+  printf "\r  [ \033[00;34m..\033[0m ] $1\n"
+}
+
+success () {
+  printf "\r\033[2K  [ \033[00;32mOK\033[0m ] $1\n"
+}
+
+fail () {
+  printf "\r\033[2K  [\033[0;31mFAIL\033[0m] $1\n"
+  echo ''
+  exit
+}
+
 # Install Homebrew
-echo "Installing Brew..."
+info "Installing Brew..."
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew analytics off
 
 ## Taps
-echo "Tapping Brew..."
+info "Tapping Brew..."
 brew tap FelixKratz/formulae
 brew tap homebrew/cask-fonts
 
 ## Install apps
-echo "Installing apps..."
+info "Installing apps..."
 brew install discord
 brew install slack
 brew install spotify
@@ -20,7 +38,7 @@ brew install notion
 brew install kap
 brew install arc
 
-echo "Installing terminal apps..."
+info "Installing terminal apps..."
 # Command fix
 brew install thefuck
 # File navigator
@@ -56,13 +74,13 @@ brew install borders
 # Symlink
 brew install stow
 
-echo "Installing GUI apps..."
+info "Installing GUI apps..."
 brew install --cask jetbrains-toolbox
 brew install --cask keybase
 brew install --cask gather
 brew install --caks wezterm
 
-echo "Installing Mac apps..."
+info "Installing Mac apps..."
 brew install --cask raycast
 brew install --cask stats
 brew install --cask alt-tab
@@ -71,7 +89,7 @@ brew install --cask font-hack-nerd-font
 brew install --cask font-jetbrains-mono-nerd-font
 brew install --cask font-sf-pro
 
-echo "Installing dev stuff..."
+info "Installing dev stuff..."
 brew install go
 brew install lua
 brew install luajit
@@ -81,7 +99,7 @@ brew install make
 brew install node
 brew install nvm
 
-echo "Changing MacOS settings..."
+info "Changing MacOS settings..."
 # https://macos-defaults.com/ more options
 defaults write com.apple.Dock autohide -bool TRUE
 defaults write NSGlobalDomain KeyRepeat -int 1
@@ -94,15 +112,15 @@ defaults write com.apple.menuextra.clock "DateFormat" -string "\"EEE d MMM HH:mm
 
 # Clone dotfiles
 if [ ! -d "$HOME/dotfiles" ]; then
-  echo "Cloning dotfiles repository..."
+  info "Cloning dotfiles repository..."
   git clone https://github.com/ybarsotti/dotfiles.git $HOME/dotfiles
 fi
 
 cd $HOME/dotfiles || exit
 
-echo "Stowing dotfiles..."
+info "Stowing dotfiles..."
 
 stow -t ~ git IDEA oh-my-posh starship tmux wezterm zsh
 
-echo "Complete :D"
+success "Complete :D"
 
