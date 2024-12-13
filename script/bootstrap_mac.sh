@@ -92,6 +92,13 @@ defaults write com.apple.dock "static-only" -bool "true"
 defaults write com.apple.finder "CreateDesktop" -bool "false"
 defaults write com.apple.menuextra.clock "DateFormat" -string "\"EEE d MMM HH:mm:ss\""
 
+# Clone dotfiles
+if [ ! -d "$HOME/dotfiles" ]; then
+  echo "Cloning dotfiles repository..."
+  git clone https://github.com/ybarsotti/dotfiles.git $HOME/dotfiles
+fi
+
+cd $HOME/dotfiles || exit
 
 echo "Complete :D"
 
