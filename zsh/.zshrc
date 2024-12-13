@@ -9,7 +9,7 @@ alias python=/usr/bin/python3
 ## Terminal Prog
 alias lg='lazygit'
 alias ld="lazydocker"
-alias l='eza -l -a --icons --group-directories-first --color=always --icons=always --no-user'
+alias ls='eza -l -a --icons --group-directories-first --color=always --icons=always --no-user'
 
 ## Editor
 alias vi="nvim"
@@ -76,6 +76,6 @@ source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 # NOTE: Must be the last line
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
-	eval "$(oh-my-posh init zsh --config $HOME/.config/.oh-my-posh/slimfat.omp.toml)"
+	eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/slimfat.omp.toml)"
 fi
 

@@ -100,5 +100,9 @@ fi
 
 cd $HOME/dotfiles || exit
 
+echo "Stowing dotfiles..."
+
+stow -t ~ git IDEA oh-my-posh starship tmux wezterm zsh
+
 echo "Complete :D"
 
