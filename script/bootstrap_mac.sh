@@ -120,7 +120,7 @@ cd $HOME/dotfiles || exit
 
 info "Stowing dotfiles..."
 
-stow -t ~ git IDEA oh-my-posh starship tmux wezterm zsh
+stow -t ~ git IDEA oh-my-posh starship tmux wezterm zsh yazi
 
 success "Complete :D"
 

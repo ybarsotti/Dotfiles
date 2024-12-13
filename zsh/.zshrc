@@ -1,6 +1,6 @@
 export TERM="xterm-256color"
 
-export EDITOR='vi'
+export EDITOR='nvim'
 
 # Aliases
 ## Program language
@@ -23,6 +23,7 @@ alias dtree="tree -L 3 -a -d -I '.git' --charset X "
 alias c="clear"
 alias e="exit"
 
+# Yazi
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"
@@ -31,6 +32,7 @@ function y() {
 	fi
 	rm -f -- "$tmp"
 }
+export YAZI_CONFIG_HOME="$HOME/.config/yazi"
 
 export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"

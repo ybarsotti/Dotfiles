@@ -13,7 +13,7 @@
     excludesfile = ~/.gitignore
 
 [web]
-    broser = google-chrome
+    browser = google-chrome
 
 [color]
     diff = auto
