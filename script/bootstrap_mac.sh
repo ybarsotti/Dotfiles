@@ -110,6 +110,8 @@ defaults write com.apple.dock "static-only" -bool "true"
 defaults write com.apple.finder "CreateDesktop" -bool "false"
 defaults write com.apple.menuextra.clock "DateFormat" -string "\"EEE d MMM HH:mm:ss\""
 
+csrutil status
+
 # Clone dotfiles
 if [ ! -d "$HOME/dotfiles" ]; then
   info "Cloning dotfiles repository..."
