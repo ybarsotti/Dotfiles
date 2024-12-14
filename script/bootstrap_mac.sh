@@ -98,6 +98,7 @@ brew install prettier
 brew install make
 brew install node
 brew install nvm
+brew install python3
 
 info "Changing MacOS settings..."
 # https://macos-defaults.com/ more options
@@ -122,7 +123,10 @@ cd $HOME/dotfiles || exit
 
 info "Stowing dotfiles..."
 
-stow -t ~ git IDEA oh-my-posh starship tmux wezterm zsh yazi
+stow -t ~ git IDEA oh-my-posh starship tmux wezterm zsh yazi invoke
+
+# Create zsh env to import
+touch .zsh_env_vars
 
 success "Complete :D"
 

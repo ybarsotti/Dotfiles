@@ -4,3 +4,5 @@ Brewfile.lock.json
 ehthumbs.db
 Icon?
 Thumbs.db
+
+.zsh_env_vars

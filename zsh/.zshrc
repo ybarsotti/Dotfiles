@@ -1,3 +1,5 @@
+# Load env vars
+[ -f .zsh_env_vars ] && source zsh_env_vars.
 export TERM="xterm-256color"
 
 export EDITOR='nvim'
@@ -75,6 +77,9 @@ export LANG=en_US.UTF-8
 
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Python invoke autocompletion
+[ -f ~/.invoke-completion.zsh ] && source ~/.invoke-completion.zsh
 
 # NOTE: Must be the last line
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
