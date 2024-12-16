@@ -1,5 +1,5 @@
 [user]
-    name = Yuri Barsotti
+    name = Yuri Barsotti Mendes
     email = yuribarsotti@gmail.com
     username = ybarsotti
 
@@ -44,5 +44,8 @@
 
 [help]
     autocorrect = 1
+
+[credential]
+    helper = osxkeychain
 
 
