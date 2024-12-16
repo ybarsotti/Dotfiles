@@ -99,6 +99,7 @@ brew install make
 brew install node
 brew install nvm
 brew install python3
+brew install docker
 
 info "Changing MacOS settings..."
 # https://macos-defaults.com/ more options
