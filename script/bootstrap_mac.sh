@@ -125,6 +125,8 @@ fi
 
 cd $HOME/dotfiles || exit
 
+pip3 install -r script/python-requirements.txt
+
 info "Stowing dotfiles..."
 
 stow -t ~ git IDEA oh-my-posh starship tmux wezterm zsh yazi invoke
