@@ -9,6 +9,12 @@ All modules(apps) have the structure below:
 ```
 
 # Instalation
+[Generate a SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) first.
+```shell
+cd ~/.ssh/
+ssh-keygen -t ed25519 -C "<email>"
+```
+
 Run the shell command below.
 
 ```shell
