@@ -19,9 +19,13 @@ fail () {
 }
 
 # Install Homebrew
-info "Installing Brew..."
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-brew analytics off
+if ! command -v brew &>/dev/null; then
+  info "Installing Brew..."
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  brew analytics off
+else
+  info "Homebrew already installed"
+fi
 
 ## Taps
 info "Tapping Brew..."
@@ -120,7 +124,7 @@ touch "$HOME/.zsh_env_vars"
 # Clone dotfiles
 if [ ! -d "$HOME/dotfiles" ]; then
   info "Cloning dotfiles repository..."
-  git clone https://github.com/ybarsotti/dotfiles.git $HOME/dotfiles
+  git clone git@github.com:ybarsotti/Dotfiles.git $HOME/dotfiles
 fi
 
 cd $HOME/dotfiles || exit

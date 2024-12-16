@@ -1,6 +1,6 @@
 # My •Dotfiles :rocket:
 This repository contains the dotfiles for Mac.
-The main idea is to modularize the apps to be able to be easily tracked outside the `.confif` folder.
+The main idea is to modularize the apps to be able to be easily tracked outside the `.config` folder.
 All modules(apps) have the structure below:
 ```
 <module>
@@ -12,7 +12,10 @@ All modules(apps) have the structure below:
 Run the shell command below.
 
 ```shell
-curl -s https://raw.githubusercontent.com/ybarsotti/Dotfiles/refs/heads/main/script/bootstrap_mac.sh | bash 
+cd ~
+git clone git@github.com:ybarsotti/Dotfiles.git $HOME/dotfiles
+chmod ./dotfiles/script/bootstrap_mac.sh
+./dotfiles/script/bootstrap_mac.sh
 ```
 After finishing the instalation, all modules will have their symlink in the right place.
 
