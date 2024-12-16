@@ -26,9 +26,10 @@ config.tab_bar_at_bottom = false
 config.use_fancy_tab_bar = false
 config.tab_and_split_indices_are_zero_based = true
 
-config.window_background_opacity = 0.95
-config.macos_window_background_blur = 50
+config.window_background_opacity = 0.80
+config.macos_window_background_blur = 10
 config.animation_fps = 60
+config.window_close_confirmation = "NeverPrompt"
 config.prefer_egl = true
 
 config.initial_rows = 40
@@ -43,7 +44,7 @@ config.default_cursor_style = "BlinkingBlock"
 config.cursor_blink_rate = 800
 
 config.enable_kitty_graphics = true
-config.hide_tab_bar_if_only_one_tab = true
+config.enable_tab_bar = false
 
 fonts.setup(config)
 keys.setup(config)
