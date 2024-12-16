@@ -16,7 +16,6 @@ ssh-keygen -t ed25519 -C "<email>"
 ```
 
 Run the shell command below.
-
 ```shell
 cd ~
 git clone git@github.com:ybarsotti/Dotfiles.git $HOME/dotfiles
