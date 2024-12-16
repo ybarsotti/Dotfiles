@@ -113,6 +113,9 @@ defaults write com.apple.menuextra.clock "DateFormat" -string "\"EEE d MMM HH:mm
 
 csrutil status
 
+# Create zsh env to import
+touch "$HOME/.zsh_env_vars"
+
 # Clone dotfiles
 if [ ! -d "$HOME/dotfiles" ]; then
   info "Cloning dotfiles repository..."
@@ -124,9 +127,6 @@ cd $HOME/dotfiles || exit
 info "Stowing dotfiles..."
 
 stow -t ~ git IDEA oh-my-posh starship tmux wezterm zsh yazi invoke
-
-# Create zsh env to import
-touch .zsh_env_vars
 
 success "Complete :D"
 
