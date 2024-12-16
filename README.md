@@ -4,8 +4,8 @@ The main idea is to modularize the apps to be able to be easily tracked outside 
 All modules(apps) have the structure below:
 ```
 <module>
-|- <directory(.config, for example)>
-|--<module main directory)
+|- <target_directory(.config, for example)>
+|--<module directory)
 ```
 
 # Instalation
