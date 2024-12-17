@@ -1,5 +1,5 @@
 # Load env vars
-[ -f .zsh_env_vars ] && source zsh_env_vars.
+[ -f $HOME/.zsh_env_vars ] && source $HOME/.zsh_env_vars
 export TERM="xterm-256color"
 
 export EDITOR='nvim'
