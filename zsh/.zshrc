@@ -36,6 +36,12 @@ function y() {
 }
 export YAZI_CONFIG_HOME="$HOME/.config/yazi"
 
+# Tmux which key
+tmux-which-key() { tmux show-wk-menu-root ; }
+zle -N tmux-which-key
+bindkey -M vicmd "u" tmux-which-key
+# NOTE: ESC + u
+
 export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
 export GOROOT="/usr/local/go"
