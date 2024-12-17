@@ -18,7 +18,7 @@ ssh-keygen -t ed25519 -C "<email>"
 Run the shell command below.
 ```shell
 cd ~
-git clone git@github.com:ybarsotti/Dotfiles.git $HOME/dotfiles
+git clone --recurse-submodules git@github.com:ybarsotti/Dotfiles.git $HOME/dotfiles
 chmod ./dotfiles/script/bootstrap_mac.sh
 ./dotfiles/script/bootstrap_mac.sh
 ```
