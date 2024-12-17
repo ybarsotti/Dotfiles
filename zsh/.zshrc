@@ -83,6 +83,6 @@ source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 # NOTE: Must be the last line
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
-	eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/slimfat.omp.toml)"
+ eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/slimfat.omp.json)"
 fi
 
