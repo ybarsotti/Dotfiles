@@ -141,6 +141,7 @@ csrutil status
 
 # Create zsh env to import
 touch "$HOME/.zsh_env_vars"
+mkdir -p "$HOME/.nvm"
 
 # Clone dotfiles
 if [ ! -d "$HOME/dotfiles" ]; then
