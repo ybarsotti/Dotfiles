@@ -126,6 +126,7 @@ brew install node
 brew install nvm
 brew install python3
 brew install docker
+brew install pipx
 
 info "Changing MacOS settings..."
 # https://macos-defaults.com/ more options

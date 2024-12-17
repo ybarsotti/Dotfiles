@@ -4,6 +4,8 @@ export TERM="xterm-256color"
 
 export EDITOR='nvim'
 
+export PATH="$PATH:/Users/yuri.mendes/.local/bin"
+
 # Aliases
 ## Program language
 alias python=/usr/bin/python3 
