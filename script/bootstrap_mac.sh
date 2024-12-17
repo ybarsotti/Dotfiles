@@ -42,6 +42,7 @@ if ! command -v brew &>/dev/null; then
   info "Installing Brew..."
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   brew analytics off
+  stow -t ~ zsh
 else
   info "Homebrew already installed"
 fi
@@ -149,7 +150,7 @@ cd $HOME/dotfiles || exit
 
 info "Stowing dotfiles..."
 
-stow -t ~ git IDEA oh-my-posh starship tmux wezterm zsh yazi invoke
+stow -t ~ git IDEA oh-my-posh starship tmux wezterm yazi zsh invoke
 
 info "Just need to install python packages now. "
 
