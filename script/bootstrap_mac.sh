@@ -31,7 +31,7 @@ fail () {
 HOMEBREW_NO_ENV_HINTS=true
 
 SSH_PUB_FILE="$HOME/.ssh/id_rsa.pub"
-if [[-f "$SSH_PUB_FILE"]]; then
+if [-f "$SSH_PUB_FILE"]; then
   success "Found SSH file"
 else
   fail "SSH file not found."
