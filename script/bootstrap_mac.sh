@@ -42,6 +42,7 @@ if ! command -v brew &>/dev/null; then
   info "Installing Brew..."
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   brew analytics off
+  /opt/homebrew/bin/brew install stow
   stow -t ~ zsh
 else
   info "Homebrew already installed"
@@ -49,7 +50,7 @@ fi
 
 ## Taps
 info "Tapping Brew..."
- brew tap FelixKratz/formulae
+brew tap FelixKratz/formulae
 
 ## Install apps
 info "Installing apps..."
