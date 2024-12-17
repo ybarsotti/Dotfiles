@@ -113,6 +113,7 @@ brew install --cask betterdisplay
 brew install --cask font-hack-nerd-font
 brew install --cask font-jetbrains-mono-nerd-font
 brew install --cask font-sf-pro
+brew install --cask hiddenbar
 
 info "Installing dev stuff..."
 brew install go
@@ -154,6 +155,7 @@ cd $HOME/dotfiles || exit
 info "Stowing dotfiles..."
 
 stow -t ~ git IDEA oh-my-posh starship tmux wezterm yazi zsh invoke
+mkdir -p ~/Developer
 
 info "Just need to install python packages now. "
 

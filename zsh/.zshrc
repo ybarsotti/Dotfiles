@@ -76,6 +76,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+# Autosuggestion config
+typeset -g ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=12'
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Python invoke autocompletion
