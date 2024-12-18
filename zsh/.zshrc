@@ -71,6 +71,9 @@ export FZF_TMUX_OPTS=" -p90%,70% "
 ## The fuck
 eval $(thefuck --alias fuck)
 
+# Initialize mise
+eval "$($HOME/.local/bin/mise activate zsh)"
+
 # GPG Key 
 export GPG_TTY=$(tty)
 

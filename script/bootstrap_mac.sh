@@ -104,6 +104,7 @@ brew install --cask jetbrains-toolbox || true
 # brew install --cask keybase || true
 brew install --cask gather || true
 brew install --cask wezterm || true
+brew install --cask apidog || true
 
 info "Installing Mac apps..."
 brew install --cask raycast
@@ -129,6 +130,8 @@ brew install docker
 brew install pipx
 # Install rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+# Mise for language env and versioning
+curl https://mise.run | sh
 
 info "Changing MacOS settings..."
 # https://macos-defaults.com/ more options
