@@ -1,6 +1,16 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/jesseduffield/lazygit/master/schema/config.json
 # cyberdream theme for lazygit
+customCommands:
+  - key: "W"
+    prompts:
+      - type: "input"
+        title: "Commit"
+        initialValue: ""
+    command: git commit -m "{{index .PromptResponses 0}}" --no-verify
+    context: "global"
+    subprocess: true
 gui:
+    nerdFontsVersion: '3'
     border: rounded
     theme:
         activeBorderColor:
@@ -21,3 +31,6 @@ gui:
             - "#ffbd5e"
         defaultFgColor:
             - "#ffffff"
+os:
+  editPreset: 'vi'
+  editInTerminal: true
