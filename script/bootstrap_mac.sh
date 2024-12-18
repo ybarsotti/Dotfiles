@@ -127,6 +127,8 @@ brew install nvm
 brew install python3
 brew install docker
 brew install pipx
+# Install rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 info "Changing MacOS settings..."
 # https://macos-defaults.com/ more options

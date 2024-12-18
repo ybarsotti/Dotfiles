@@ -92,6 +92,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # PATHS
 export PATH="$PATH:/Users/yuri.mendes/.local/bin"
+export PATH="$PATH:$HOME/.cargo/bin"
 
 # ------------///-------------------
 
