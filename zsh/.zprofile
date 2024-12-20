@@ -9,3 +9,6 @@ export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}";
 
 # Created by `pipx` on 2024-12-17 14:45:22
 export PATH="$PATH:/Users/yuri.mendes/.local/bin"
+
+# Mise
+eval "$($HOME/.local/bin/mise activate zsh --shims)"
