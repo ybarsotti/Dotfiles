@@ -46,8 +46,8 @@ bindkey -M vicmd "u" tmux-which-key
 export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
 
-# GoLang stuff
-export GOROOT="$(brew --prefix go)"
+# Go
+export GOROOT=/usr/local/go
 
 # Set home base config directory
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -96,6 +96,8 @@ export NVM_DIR="$HOME/.nvm"
 # PATHS
 export PATH="$PATH:/Users/yuri.mendes/.local/bin"
 export PATH="$PATH:$HOME/.cargo/bin"
+## Go 
+export PATH="$GOROOT/bin:$PATH"
 
 # ------------///-------------------
 
