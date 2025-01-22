@@ -98,6 +98,8 @@ brew install tree
 brew install borders || true
 # Symlink
 brew install stow
+# Load testing
+brew install oha
 
 info "Installing GUI apps..."
 brew install --cask jetbrains-toolbox || true
