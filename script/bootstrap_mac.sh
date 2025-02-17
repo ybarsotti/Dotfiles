@@ -170,6 +170,7 @@ stow -t ~ git IDEA oh-my-posh starship tmux wezterm yazi zsh invoke lazygit lazy
 mkdir -p ~/Developer
 
 info "Just need to install python packages now. "
+info "Install selene: cargo install selene"
 
 success "Complete :D"
 
