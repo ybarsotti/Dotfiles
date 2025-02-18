@@ -169,8 +169,16 @@ info "Stowing dotfiles..."
 stow -t ~ git IDEA oh-my-posh starship tmux wezterm yazi zsh invoke lazygit lazydocker
 mkdir -p ~/Developer
 
-info "Just need to install python packages now. "
-info "Install selene: cargo install selene"
+info "Reminders..."
+
+info "1. Update hosts"
+info "-> 172.17.0.1 host.docker.internal"
+
+info "2. Install Python packages"
+info "-> python-requirements.txt"
+
+info "3. Install selene (for nvim auto session)"
+info "-> cargo install selene"
 
 success "Complete :D"
 
