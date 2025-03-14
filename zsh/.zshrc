@@ -14,6 +14,9 @@ alias lg='lazygit'
 alias ld="lazydocker"
 alias ls='eza -l -a --icons --group-directories-first --color=always --icons=always --no-user'
 
+## Debugger
+alias chrome-debug="open -a 'Google Chrome' --args --remote-debugging-port=9222"
+
 ## Editor
 alias vi="nvim"
 alias vim="nvim"
@@ -98,6 +101,7 @@ export PATH="$PATH:/Users/yuri.mendes/.local/bin"
 export PATH="$PATH:$HOME/.cargo/bin"
 ## Go 
 export PATH="$GOROOT/bin:$PATH"
+export PATH="$(go env GOPATH)/bin:$PATH"
 
 # ------------///-------------------
 
@@ -106,3 +110,6 @@ if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
  eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/slimfat.omp.json)"
 fi
 
+
+# Added by Windsurf
+export PATH="/Users/yuri.mendes/.codeium/windsurf/bin:$PATH"

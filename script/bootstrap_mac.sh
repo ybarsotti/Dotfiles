@@ -10,42 +10,42 @@ RESET='\033[0m'
 
 echo ''
 
-info () {
-  echo -e  "${BLUE} $1 ${RESET}"
+info() {
+	echo -e "${BLUE} $1 ${RESET}"
 }
 
-success () {
-  echo -e "${GREEN} $1 ${RESET}"
+success() {
+	echo -e "${GREEN} $1 ${RESET}"
 }
 
-warning ( ) {
-echo -e "${YELLOW} $1 ${RESET}"
+warning() {
+	echo -e "${YELLOW} $1 ${RESET}"
 }
 
-fail () {
-  echo -e "${RED}$1${RESET}"
-  echo ''
-  exit
+fail() {
+	echo -e "${RED}$1${RESET}"
+	echo ''
+	exit
 }
 
 HOMEBREW_NO_ENV_HINTS=true
 
 SSH_PUB_FILE="$HOME/.ssh/id_rsa.pub"
 if test -f "$SSH_PUB_FILE"; then
-  success "Found SSH file"
+	success "Found SSH file"
 else
-  fail "SSH file not found."
+	fail "SSH file not found."
 fi
 
 # Install Homebrew
 if ! command -v brew &>/dev/null; then
-  info "Installing Brew..."
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-  eval "$(/opt/homebrew/bin/brew shellenv)"
-  /opt/homebrew/bin/brew install stow
-  stow -t ~ zsh
+	info "Installing Brew..."
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+	eval "$(/opt/homebrew/bin/brew shellenv)"
+	/opt/homebrew/bin/brew install stow
+	stow -t ~ zsh
 else
-  info "Homebrew already installed"
+	info "Homebrew already installed"
 fi
 
 brew analytics off
@@ -68,7 +68,7 @@ info "Installing terminal apps..."
 brew install thefuck
 # File navigator
 brew install yazi
-# Git 
+# Git
 brew install lazygit
 # docker
 brew install lazydocker
@@ -154,8 +154,8 @@ mkdir -p "$HOME/.nvm"
 
 # Clone dotfiles
 if [ ! -d "$HOME/dotfiles" ]; then
-  info "Cloning dotfiles repository..."
-  git clone git@github.com:ybarsotti/Dotfiles.git $HOME/dotfiles
+	info "Cloning dotfiles repository..."
+	git clone git@github.com:ybarsotti/Dotfiles.git $HOME/dotfiles
 fi
 
 cd $HOME/dotfiles || exit
@@ -181,4 +181,3 @@ info "3. Install selene (for nvim auto session)"
 info "-> cargo install selene"
 
 success "Complete :D"
-
