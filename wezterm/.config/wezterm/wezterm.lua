@@ -2,7 +2,7 @@ local wezterm = require("wezterm")
 local fonts = require("fonts")
 local keys = require("keys")
 local bar = require("plugins.bar")
-local theme = require("themes.cyberdream")
+local theme = require("themes.melange_dark")
 require("plugins.zen-mode-vim")
 
 local config = wezterm.config_builder()
@@ -26,8 +26,8 @@ config.tab_bar_at_bottom = false
 config.use_fancy_tab_bar = false
 config.tab_and_split_indices_are_zero_based = true
 
-config.window_background_opacity = 0.80
-config.macos_window_background_blur = 10
+config.window_background_opacity = 0.95
+config.macos_window_background_blur = 8
 config.animation_fps = 60
 config.window_close_confirmation = "NeverPrompt"
 config.prefer_egl = true
