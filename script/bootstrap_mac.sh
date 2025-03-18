@@ -91,6 +91,8 @@ brew install fd
 brew install ripgrep
 # Tmux
 brew install tmux
+# Zellij
+brew install zellij
 brew install tree-sitter
 brew install tree
 # Better borders
@@ -166,7 +168,7 @@ git clone -b v2.1.2 https://github.com/catppuccin/tmux.git ~/.config/tmux/plugin
 
 info "Stowing dotfiles..."
 
-stow -t ~ git IDEA oh-my-posh starship tmux wezterm yazi zsh invoke lazygit lazydocker
+stow -t ~ git IDEA oh-my-posh starship tmux wezterm yazi zsh invoke lazygit lazydocker zellij
 mkdir -p ~/Developer
 
 info "Reminders..."
