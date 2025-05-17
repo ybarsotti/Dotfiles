@@ -49,3 +49,5 @@
     helper = osxkeychain
 
 
+[safe]
+	directory = /var/task
