@@ -102,6 +102,8 @@ brew install borders || true
 brew install stow
 # Load testing
 brew install oha
+# Github
+brew install gh
 
 info "Installing GUI apps..."
 brew install --cask jetbrains-toolbox || true
