@@ -172,7 +172,7 @@ git clone -b v2.1.2 https://github.com/catppuccin/tmux.git ~/.config/tmux/plugin
 
 info "Stowing dotfiles..."
 
-stow -t ~ git IDEA oh-my-posh starship tmux wezterm yazi zsh invoke lazygit lazydocker zellij
+stow -t ~ git IDEA oh-my-posh starship tmux wezterm yazi zsh invoke lazygit lazydocker zellij mcphub
 mkdir -p ~/Developer
 
 info "Reminders..."
