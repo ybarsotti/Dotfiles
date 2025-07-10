@@ -104,6 +104,8 @@ brew install stow
 brew install oha
 # Github
 brew install gh
+# Gitflow
+brew install git-flow
 
 info "Installing GUI apps..."
 brew install --cask jetbrains-toolbox || true
