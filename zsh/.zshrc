@@ -113,3 +113,19 @@ fi
 
 # Added by Windsurf
 export PATH="/Users/yuri.mendes/.codeium/windsurf/bin:$PATH"
+
+# bun completions
+[ -s "/Users/yuri.mendes/.bun/_bun" ] && source "/Users/yuri.mendes/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# pnpm
+export PNPM_HOME="/Users/yuri.mendes/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+eval "$(gh copilot alias -- zsh)"
